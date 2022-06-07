@@ -1,0 +1,45 @@
+// QUESTION 1-
+//Debo is a school student whose favourite subject is Mathematics. Her teacher taught
+Matrices and she found it very interesting. Also, she is learning C programming. She
+thought of developing a C program to find the transpose of a matrix. She is not much
+familiar with nested loops. Help her to complete the code.
+//
+#include <stdio.h>
+int main() {
+    int arr[20][20],b[20][20];
+    int r,c,i,j;
+     printf("Enter rows and columns: ");
+    scanf("%d %d",&r,&c);
+    printf("\nEnter the array elements\n");
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+        scanf("%d",&arr[i][j]);
+    }
+    }
+     printf("\nEntered matrix: \n");
+     for (int i = 0; i < r; ++i){
+     for (int j = 0; j < c; ++j) {
+     printf("%d  ",arr[i][j]);
+     }
+     printf("\n");
+  }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            b[j][i]=arr[i][j];
+        }
+    }
+    printf("\nTranspose of matrix\n");
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d  ",b[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
